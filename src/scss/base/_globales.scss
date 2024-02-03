@@ -1,0 +1,55 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+
+    @include m.tablet {
+        height: 100%;
+    }
+
+    display: flex;
+    flex-direction: column;
+    background-color:  #000911    ;
+    color: v.$blanco;
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+
+    .tamaño-alerta {
+        font-size: v.$font-size-alerta ;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filtro{
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}

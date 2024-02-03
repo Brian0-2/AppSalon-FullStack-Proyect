@@ -1,0 +1,103 @@
+@use 'base/variables' as v; //importar variables
+@use 'base/mixins' as m;
+
+.contenedor-app {
+    position: static;
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      min-height: 10vh;
+    }
+ 
+    .imagen {
+        position: relative;
+        background-image: url(../img/logo.png);
+        background-size: cover;
+        background-position: center center;
+        overflow: hidden;
+        height: 30rem;
+       
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+          z-index: 1;
+          
+        }
+  
+      @include m.tablet {
+        height: auto;
+        border-radius: 1rem;
+        margin-left: 1rem;
+      }
+    }
+  
+    .app {
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+  
+      @include m.tablet {
+        overflow: scroll;
+  
+        &.app::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+  
+
+
+.logo-pagina {
+    color: v.$rosita;
+    margin-top: 1.8rem;
+
+    &:hover {
+        -webkit-text-stroke: .6px v.$blanco;
+        -webkit-text-fill-color: v.$rosita;
+    }
+
+}
+
+.barra {
+    margin: v.$separacion 0;
+    margin-bottom: 1rem;
+
+    span {
+        color: v.$rosita;
+        font-size: 2.5rem;
+        font-weight: v.$bold;
+    }
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .boton {
+        text-align: left;
+        @include m.boton(#000911 , v.$blanco);
+        margin: 0;
+        
+    }
+}
+
+.barra-servicios{
+    margin-bottom: v.$separacion;
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+
+    .boton{
+        margin: 0 0 1rem 0;
+    }
+}

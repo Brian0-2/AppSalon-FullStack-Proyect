@@ -1,0 +1,23 @@
+{
+    "name": "sct11/app-salon_php_mvc_js_sass",
+    "description": "Proyecto AppSalon",
+    "type": "proyect",
+    "autoload": {
+        "psr-4": {
+            "Sct11\\AppSalon\\": "src/",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Brian"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.7",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

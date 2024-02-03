@@ -1,0 +1,76 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.citas {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 1rem;
+        border-top: 1px solid v.$blanco;
+
+        p {
+            font-weight: v.$bold;
+            color: v.$azul;
+            font-size: 3rem;
+        }
+
+        span,
+        .servicio {
+            font-weight: v.$regular;
+            color: v.$blanco;
+        }
+
+    }
+
+    .total {
+        text-align: center;
+        color: v.$rosita;
+    }
+}
+
+.servicios {
+    //directiva de SASS para heredar las propiedades de una clase
+    @extend .citas;
+
+    .acciones {
+        margin: 0;
+    }
+
+    .boton,
+    .boton-eliminar {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+}
+
+.boton.amarillo {
+    background-color: v.$amarillo;
+    color: v.$negro;
+
+    &:hover {
+        background-color: green;
+        color: v.$blanco;
+    }
+}
+
+
+
+//Mensaje de alerta para mostrar que no hay citas en esa fecha
+.no-hay-citas {
+    background-color: rgb(65, 63, 63);
+    padding: 1rem;
+    color: v.$rosita;
+    -webkit-text-stroke: .6px v.$blanco;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    font-size: 2.2rem;
+
+}
+
+@include m.tablet {
+    .no-hay-citas {
+        margin-top: 10rem;
+        font-size: 3rem;
+    }
+}

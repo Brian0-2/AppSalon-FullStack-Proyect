@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+@include m.tablet {
+
+    .contenedor,
+    .navegacion-footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 2rem;
+
+    }
+
+}
+
+.navegacion-footer {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+   
+}
+
+.footer {
+    text-align: center;
+    
+    p {
+        font-size: 1.4rem;
+        color: grey;
+    }
+
+    a {
+        font-size: 1.4rem;
+        color: grey;
+
+        &:hover {
+            -webkit-text-stroke: .6px v.$blanco;
+            -webkit-text-fill-color: v.$rosita;
+        }
+    }
+}

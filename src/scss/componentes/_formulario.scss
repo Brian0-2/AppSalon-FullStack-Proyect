@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    margin-top: 5rem;
+    width: 100%;
+    
+    span{
+        color: v.$rosita;
+        font-weight: v.$bold;
+    }
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    label{
+        flex:0 0 10rem;//alinea los 2 txtfield al centro menos los label
+    }
+    input {
+        flex:1; //toma el tamaño del formulario los txt field
+        border: none;
+        padding: calc(v.$separacion / 4);//50 px entre 4tro
+        border-radius: 1rem;
+
+        &:disabled{
+            background-color: lighten(v.$negro, 40%);
+            color: v.$blanco;
+            cursor: not-allowed;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@use'base/variables' as v;
+
+.contenido-resumen {
+  padding: 3rem 0;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  span {
+    color: v.$azul;
+    font-weight: v.$bold;
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    margin-top: v.$separacion;
+  }
+}
+
+.contenedor-servicio {
+  border-bottom: 1px solid v.$gris;
+}
+
+.total {
+  color: v.$rosita;
+  font-size: 4rem;
+  text-align: center;
+
+  span {
+    font-size: 4rem;
+  }
+
+}
